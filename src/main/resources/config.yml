@@ -1,0 +1,6 @@
+BungeePlayer:
+  Debug:
+    Events: false
+    Packets: false
+    WatchDog: false
+    BungeePlayerCommand: false 

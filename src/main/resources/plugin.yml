@@ -1,0 +1,13 @@
+name: ${name}
+main: io.github.lxgaming.bungeeplayer.BungeePlayer
+version: ${version}
+description: BungeePlayer.
+author: LX_Gaming
+website: http://www.lxgaming.github.io
+commands:
+  bungeeplayer:
+    description: Main plugin command.
+    usage: /<command>
+permissions:
+  BungeePlayer.Command:
+    description: Permission to use command.
