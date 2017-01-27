@@ -3,4 +3,12 @@ BungeePlayer:
     Events: false
     Packets: false
     WatchDog: false
-    BungeePlayerCommand: false 
+    BungeePlayerCommand: false
+  SupportedProtocols:
+    - 316
+    - 315
+    - 210
+    - 110
+    - 109
+    - 108
+    - 107

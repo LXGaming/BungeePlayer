@@ -30,6 +30,11 @@ public class BungeePlayerListener implements Listener {
 	@EventHandler(priority = EventPriority.LOWEST)
 	public void onPostLogin(PostLoginEvent event) {
 		BungeePlayer.getInstance().debugMessage("Events", "PostLoginEvent");
+		
+		if (!BungeePlayer.getInstance().getConfig().getConfiguration().getIntList("BungeePlayer.SupportedProtocols").contains(event.getPlayer().getPendingConnection().getVersion())) {
+			return;
+		}
+		
 		try {
 			if (BungeePlayer.getInstance().getData().getPlayer(event.getPlayer().getUniqueId()) != null) {
 				BungeePlayer.getInstance().getBungeePacket().getChannelHandler().removeChannel(event.getPlayer(), "bungeeplayer_packet_handler");
