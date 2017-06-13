@@ -49,6 +49,12 @@ public class ChannelHandler extends ChannelDuplexHandler {
 			
 			if (ByteBuf.class.isAssignableFrom(msg.getClass())) {
 				byteBuf = ((ByteBuf) msg).copy();
+				
+				if (byteBuf.readableBytes() <= 0) {
+					super.write(ctx, msg, promise);
+					return;
+				}
+				
 				int packetId = DefinedPacket.readVarInt(byteBuf);
 				
 				/*
