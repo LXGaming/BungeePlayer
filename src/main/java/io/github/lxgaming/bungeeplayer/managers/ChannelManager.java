@@ -16,7 +16,6 @@
 
 package io.github.lxgaming.bungeeplayer.managers;
 
-import io.github.lxgaming.bungeeplayer.BungeePlayer;
 import io.github.lxgaming.bungeeplayer.data.Player;
 import io.github.lxgaming.bungeeplayer.util.ChannelHandler;
 import io.github.lxgaming.bungeeplayer.util.Reference;
@@ -32,9 +31,6 @@ public final class ChannelManager {
     public static boolean addChannel(Player player, Object object) {
         Channel channel = Toolbox.getChannelWrapper(object.getClass(), object).map(ChannelWrapper::getHandle).orElse(null);
         if (channel != null && channel.pipeline().get(CHANNEL_HANDLER) == null) {
-            
-            BungeePlayer.getInstance().getLogger().info(String.join(",", channel.pipeline().names()));
-            
             channel.pipeline().addBefore(PipelineUtils.BOSS_HANDLER, CHANNEL_HANDLER, new ChannelHandler(player));
             return true;
         } else {
