@@ -20,7 +20,7 @@ public class Reference {
     
     public static final String PLUGIN_ID = "bungeeplayer";
     public static final String PLUGIN_NAME = "BungeePlayer";
-    public static final String PLUGIN_VERSION = "1.1.0";
+    public static final String PLUGIN_VERSION = "1.1.1";
     public static final String AUTHORS = "LX_Gaming";
     public static final String SOURCE = "https://github.com/LXGaming/BungeePlayer/";
     public static final String WEBSITE = "https://lxgaming.github.io/";

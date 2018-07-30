@@ -33,7 +33,10 @@ public final class PacketManager {
     public static void registerPackets() {
         
         // ClientPlayerLook
-        getClientPackets().add(new Packet(0x0F, 340, 336, PacketManager::handleClientPlayerLook));
+        getClientPackets().add(new Packet(0x12, 395, 389, PacketManager::handleClientPlayerLook));
+        getClientPackets().add(new Packet(0x10, 388, 386, PacketManager::handleClientPlayerLook));
+        getClientPackets().add(new Packet(0x0E, 385, 343, PacketManager::handleClientPlayerLook));
+        getClientPackets().add(new Packet(0x0F, 342, 336, PacketManager::handleClientPlayerLook));
         getClientPackets().add(new Packet(0x10, 335, 332, PacketManager::handleClientPlayerLook));
         getClientPackets().add(new Packet(0x0F, 331, 318, PacketManager::handleClientPlayerLook));
         getClientPackets().add(new Packet(0x0E, 317, 77, PacketManager::handleClientPlayerLook));
@@ -41,7 +44,10 @@ public final class PacketManager {
         getClientPackets().add(new Packet(0x05, 66, 47, PacketManager::handleClientPlayerLook));
         
         // ClientPlayerPosition
-        getClientPackets().add(new Packet(0x0D, 340, 336, PacketManager::handleClientPlayerPosition));
+        getClientPackets().add(new Packet(0x10, 395, 389, PacketManager::handleClientPlayerPosition));
+        getClientPackets().add(new Packet(0x0E, 388, 386, PacketManager::handleClientPlayerPosition));
+        getClientPackets().add(new Packet(0x0C, 385, 343, PacketManager::handleClientPlayerPosition));
+        getClientPackets().add(new Packet(0x0D, 342, 336, PacketManager::handleClientPlayerPosition));
         getClientPackets().add(new Packet(0x0E, 335, 332, PacketManager::handleClientPlayerPosition));
         getClientPackets().add(new Packet(0x0D, 331, 318, PacketManager::handleClientPlayerPosition));
         getClientPackets().add(new Packet(0x0C, 317, 77, PacketManager::handleClientPlayerPosition));
@@ -49,7 +55,10 @@ public final class PacketManager {
         getClientPackets().add(new Packet(0x04, 66, 47, PacketManager::handleClientPlayerPosition));
         
         // ClientPlayerPositionAndLook
-        getClientPackets().add(new Packet(0x0E, 340, 336, PacketManager::handleClientPlayerPositionAndLook));
+        getClientPackets().add(new Packet(0x11, 395, 389, PacketManager::handleClientPlayerPositionAndLook));
+        getClientPackets().add(new Packet(0x0F, 388, 386, PacketManager::handleClientPlayerPositionAndLook));
+        getClientPackets().add(new Packet(0x0D, 385, 343, PacketManager::handleClientPlayerPositionAndLook));
+        getClientPackets().add(new Packet(0x0E, 342, 336, PacketManager::handleClientPlayerPositionAndLook));
         getClientPackets().add(new Packet(0x0F, 335, 332, PacketManager::handleClientPlayerPositionAndLook));
         getClientPackets().add(new Packet(0x0E, 331, 318, PacketManager::handleClientPlayerPositionAndLook));
         getClientPackets().add(new Packet(0x0D, 317, 77, PacketManager::handleClientPlayerPositionAndLook));
@@ -57,14 +66,19 @@ public final class PacketManager {
         getClientPackets().add(new Packet(0x06, 66, 47, PacketManager::handleClientPlayerPositionAndLook));
         
         // ServerJoinGame
-        // getServerPackets().add(new Packet(0x23, 340, 332, PacketManager::handleServerJoinGame));
-        // getServerPackets().add(new Packet(0x24, 331, 318, PacketManager::handleServerJoinGame));
-        // getServerPackets().add(new Packet(0x23, 317, 86, PacketManager::handleServerJoinGame));
-        // getServerPackets().add(new Packet(0x24, 85, 67, PacketManager::handleServerJoinGame));
-        // getServerPackets().add(new Packet(0x01, 66, 47, PacketManager::handleServerJoinGame));
+        getServerPackets().add(new Packet(0x25, 395, 389, PacketManager::handleServerJoinGame));
+        getServerPackets().add(new Packet(0x24, 388, 345, PacketManager::handleServerJoinGame));
+        getServerPackets().add(new Packet(0x23, 344, 332, PacketManager::handleServerJoinGame));
+        getServerPackets().add(new Packet(0x24, 331, 318, PacketManager::handleServerJoinGame));
+        getServerPackets().add(new Packet(0x23, 317, 86, PacketManager::handleServerJoinGame));
+        getServerPackets().add(new Packet(0x24, 85, 67, PacketManager::handleServerJoinGame));
+        getServerPackets().add(new Packet(0x01, 66, 47, PacketManager::handleServerJoinGame));
         
         // ServerPlayerPositionAndLook
-        getServerPackets().add(new Packet(0x2F, 340, 336, PacketManager::handleServerPlayerPositionAndLook));
+        getServerPackets().add(new Packet(0x32, 395, 389, PacketManager::handleServerPlayerPositionAndLook));
+        getServerPackets().add(new Packet(0x31, 388, 352, PacketManager::handleServerPlayerPositionAndLook));
+        getServerPackets().add(new Packet(0x30, 351, 345, PacketManager::handleServerPlayerPositionAndLook));
+        getServerPackets().add(new Packet(0x2F, 344, 336, PacketManager::handleServerPlayerPositionAndLook));
         getServerPackets().add(new Packet(0x2E, 335, 332, PacketManager::handleServerPlayerPositionAndLook));
         getServerPackets().add(new Packet(0x2F, 331, 318, PacketManager::handleServerPlayerPositionAndLook));
         getServerPackets().add(new Packet(0x2E, 317, 86, PacketManager::handleServerPlayerPositionAndLook));
@@ -73,7 +87,10 @@ public final class PacketManager {
         getServerPackets().add(new Packet(0x08, 66, 47, PacketManager::handleServerPlayerPositionAndLook));
         
         // ServerRespawn
-        getServerPackets().add(new Packet(0x35, 340, 336, PacketManager::handleServerRespawn));
+        getServerPackets().add(new Packet(0x38, 395, 389, PacketManager::handleServerRespawn));
+        getServerPackets().add(new Packet(0x37, 388, 352, PacketManager::handleServerRespawn));
+        getServerPackets().add(new Packet(0x36, 351, 345, PacketManager::handleServerRespawn));
+        getServerPackets().add(new Packet(0x35, 344, 336, PacketManager::handleServerRespawn));
         getServerPackets().add(new Packet(0x34, 335, 332, PacketManager::handleServerRespawn));
         getServerPackets().add(new Packet(0x35, 331, 318, PacketManager::handleServerRespawn));
         getServerPackets().add(new Packet(0x33, 317, 86, PacketManager::handleServerRespawn));
